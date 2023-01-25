@@ -56,6 +56,9 @@ export function SignIn() {
                 Sign In
               </Button>
             </Link>
+            <Link to="">
+              <p className="p-6 text-center text-[#280559] underline text-normal">Applicant Login</p>
+            </Link>
           </div>
         </div>
         <div className="ml-[100px] w-[1058px] lg-max:hidden">
