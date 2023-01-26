@@ -17,7 +17,7 @@ export function LogActivities() {
     <div className="mt-12 w-full bg-[#E8E9EB]">
       <div>
         <div className=" rounded-[34px] bg-white p-2 xl:p-12">
-          <div className=" my-3 flex w-full flex-row justify-between py-5">
+          <div className=" my-3 flex w-full flex-row justify-between pb-6">
             <p className="text-[32px] font-bold text-black">Activity Log</p>
           </div>
           <div className=" flex w-full justify-between rounded-lg pb-4 pl-12">
@@ -91,8 +91,8 @@ export function LogActivities() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {Userprops.map((items) => (
-                  <tr>
+                {Userprops.map((items, index) => (
+                  <tr key={index}>
                     <td className="whitespace-nowrap py-4 text-sm font-medium text-gray-800">
                       <div className="flex h-7 items-center">
                         <Checkbox />
@@ -107,7 +107,7 @@ export function LogActivities() {
                     <td className="whitespace-nowrap px-6 py-4 text-lg text-gray-800">
                       {items.action}
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-lg text-left font-semibold">
+                    <td className="whitespace-nowrap px-6 py-4 text-left text-lg font-semibold">
                       {items.name}
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left text-lg font-medium">

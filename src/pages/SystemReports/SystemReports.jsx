@@ -56,7 +56,7 @@ export function SystemReports() {
         <p className=" text-4xl font-semibold text-[#280559]">System Reports</p>
         <p className=" font text-base text-[#9898A3]">View System Reports</p>
       </div>
-      <div className=" mb-7 flex flex-nowrap gap-10 overflow-x-auto rounded-t-[24px] bg-white px-5 xl:px-[64px]">
+      <div className=" mb-7 flex flex-nowrap gap-10 overflow-x-auto rounded-t-[20px] bg-white px-5 xl:px-[64px]">
         {/* Loop through tab data and render button for each. */}
         {tabsData.map((tab, idx) => {
           return (
