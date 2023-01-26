@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import loginimg from "../../../public/img/login/loginimg.svg";
 import googlebtn from "../../../public/img/login/google.svg";
@@ -15,6 +16,7 @@ import {
 } from "@material-tailwind/react";
 
 export function SignIn() {
+  const [authType, setAuthType] = useState("main");
   return (
     <div className=" flex h-full flex-row bg-white ">
       <div className=" my-10 ml-16 lg-max:hidden">
@@ -23,7 +25,9 @@ export function SignIn() {
       <div className=" flex flex-row items-center justify-center bg-white ">
         <div className="mt-8 flex flex-row items-center justify-center">
           <div className="w-[345px] bg-white p-5">
-            <p className=" mb-2 text-[40px] font-bold text-[#280559]">Login</p>
+            <p className=" mb-2 text-[40px] font-bold text-[#280559]">
+              {authType === "main" ? "Login" : "Applicant Login"}
+            </p>
             <p className=" mb-14 text-[16px] font-normal text-[#667085]">
               Please fill your detail to access your account.
             </p>
@@ -56,9 +60,14 @@ export function SignIn() {
                 Sign In
               </Button>
             </Link>
-            <Link to="">
-              <p className="p-6 text-center text-[#280559] underline text-normal">Applicant Login</p>
-            </Link>
+            <p
+              className="text-normal p-6 text-center text-[#280559] underline cursor-pointer"
+              onClick={() => {
+                setAuthType((prev) => (prev === "main" ? "applicant" : "main"));
+              }}
+            >
+              {authType === "main" ? "Applicant Login" : "Main Login"}
+            </p>
           </div>
         </div>
         <div className="ml-[100px] w-[1058px] lg-max:hidden">
