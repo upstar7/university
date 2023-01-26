@@ -86,7 +86,7 @@ export function Dashboard() {
   const { sidenavColor, sidenavType, openSidenav } = controller;
 
   return (
-    <div className="min-h-screen bg-blue-gray-50/50 overflow-y-auto">
+    <div className="min-h-screen overflow-y-auto bg-blue-gray-50/50">
       <Sidenav routes={routes} role={roles[defaultRoleType]} />
 
       <div
@@ -124,7 +124,7 @@ export function Dashboard() {
             element={<CreateAcademic />}
           />
           <Route
-            path="/InvoiceManagement/CreateInvoice"
+            path="/InvoiceManagement/createInvoice"
             element={<CreateInvoice />}
           />
           <Route

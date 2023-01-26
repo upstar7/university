@@ -11,7 +11,7 @@ import saveIcon from "../../../public/img/saveIcon.svg"
 import close from  '../../../public/img/close.svg'
 import plus from '../../../public/img/plus.svg';
 
-import CustomModal from "./Addfield";
+import CustomModal from "./AddField";
 
 import 'flowbite';
 export function CreateMailing() {
