@@ -53,7 +53,7 @@ export function Sidenav({ brandImg, brandName, routes, role }) {
         </div>
 
         <div className="mx-3 px-3 lg-max:mx-0">
-          <p className=" pb-4 text-[#92929D] lg-max:hidden">{brandName}</p>
+          <p className=" pb-4 text-[#92929D] lg-max:hidden font-semibold">{brandName}</p>
 
           {routes.map(({ layout, title, pages }, key) => (
             <ul key={key} className="mb-4 flex flex-col items-center gap-1">
