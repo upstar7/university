@@ -116,7 +116,7 @@ export function UsersByEmail() {
                     <td className="whitespace-nowrap px-6 py-4 text-lg text-gray-800">
                       {items.email}
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-lg text-left font-semibold">
+                    <td className="whitespace-nowrap px-6 py-4 text-left text-lg font-semibold">
                       {items.phone}
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left text-lg font-medium">
