@@ -13,19 +13,19 @@ import plus from '../../../public/img/plus.svg';
 import filterIcon from '../../../public/img/filterIcon.svg';
 import down from '../../../public/img/downIcon.svg';
 import vector from '../../../public/img/vector.svg';
-import print from '../../../public/img/print.svg'
-import General_voice_data from "@/data/General-voice-data";
+import print from '../../../public/img/print.svg';
+import Commission_voice_data from "@/data/Commission-voice-data";
 
-export function Commission() {
+export function General() {
    
     return (
         <div className="mt-[30px] w-full bg-[#E8E9EB]">
             <div>
             <div className=" bg-white p-2 xl:p-12 rounded-[34px]">
-              <div className="flex flex-row w-full justify-between items-center py-5 my-3 gap-3">
-                        <p className="text-[32px] text-black font-bold">General Invoice</p>
-                        <NavLink to="createMailing">
-                            <Button className=" h-[60px] bg-[#280559] rounded-2xl flex flex-row justify-center items-center">
+                <div className="flex flex-row w-full justify-between items-center py-5 my-3 gap-3">
+                        <p className=" text-3xl text-black font-bold">Commission Invoice</p>
+                        <NavLink to="createInvoice">
+                            <Button className=" h-[60px] bg-[#280559] rounded-2xl flex flex-row justify-center items-center p-2">
                             <img className="w-[20px] m-1" src={plus} alt='...'/>
                             <p className="m-1 text-base text-white font-medium normal-case">Add New Invoice</p>
                             </Button>
@@ -79,109 +79,109 @@ export function Commission() {
                         </div>
                     </div>
                     <div className="flex flex-col overflow-x-auto">
-                    <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                            <tr>
-                                <th
-                                    scope="col"
-                                    className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    
-                                </th>
-                                                                
-                                <th
-                                    scope="col"
-                                    className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    ID
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Date
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Name
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Email
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Service
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Amount
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[113px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Status
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[115px] px-6 py-3 text-lg font-bold text-center text-gray-500  "
-                                >
-                                    action
-                                </th>
-                                <th
-                                    scope="col"
-                                    className="w-[115px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
-                                >
-                                    Option
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-200">
-                            {General_voice_data.map((items) => (
-                            <tr>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    <Checkbox/>
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    {items.ID}
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    {items.Date}
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    {items.Recipient}
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    {items.Email}
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
-                                    {items.Service}
-                                </td>
-                                <td className="px-6 py-4 text-lg text-gray-800 text-center whitespace-nowrap">
-                                    {items.Amount}
-                                </td>
-                                <td className={`text-${items.color} px-6 py-4 text-sm font-semibold whitespace-nowrap`}>
-                                    {items.Status}
-                                </td>
-                                <td className=" textpy-4 text-lg font-medium text-center whitespace-nowrap">
-                                    <Button variant="outlined" className=" rounded-2xl px-5 py-2"><p className=" text-center justify-center p-0 m-0">view</p></Button>
-                                </td>
-                                <td className="px-6 py-4 text-lg font-medium text-center whitespace-nowrap">
-                                    {items.option}
-                                </td>
-                            </tr>
-                            ))}  
-                        </tbody>
-                    </table>
+                        <table className="min-w-full divide-y divide-gray-200">
+                            <thead className="bg-gray-50">
+                                <tr>
+                                    <th
+                                        scope="col"
+                                        className="w-[33px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        
+                                    </th>
+                                                                    
+                                    <th
+                                        scope="col"
+                                        className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        ID
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Date
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[83px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Name
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Email
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Service
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[346px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Amount
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[113px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Status
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[115px] px-6 py-3 text-lg font-bold text-center text-gray-500  "
+                                    >
+                                        action
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="w-[115px] px-6 py-3 text-lg font-bold text-left text-gray-500  "
+                                    >
+                                        Option
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                                {Commission_voice_data.map((items) => (
+                                <tr>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        <Checkbox/>
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        {items.ID}
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        {items.Date}
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        {items.Recipient}
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        {items.Email}
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 whitespace-nowrap">
+                                        {items.Service}
+                                    </td>
+                                    <td className="px-6 py-4 text-lg text-gray-800 text-center whitespace-nowrap">
+                                        {items.Amount}
+                                    </td>
+                                    <td className={`text-${items.color} px-6 py-4 text-sm font-semibold whitespace-nowrap`}>
+                                        {items.Status}
+                                    </td>
+                                    <td className=" textpy-4 text-lg font-medium text-center whitespace-nowrap">
+                                        <Button variant="outlined" className=" rounded-2xl px-5 py-2"><p className=" text-center justify-center p-0 m-0">view</p></Button>
+                                    </td>
+                                    <td className="px-6 py-4 text-lg font-medium text-center whitespace-nowrap">
+                                        {items.option}
+                                    </td>
+                                </tr>
+                                ))}  
+                            </tbody>
+                        </table>
                     </div>
                     <div className="grid grid-cols-1 xl:grid-cols-2 ">
                         <p className="text-base text-[#92929D] px-5"><span className="text-[#280559]">1</span>-5 of 56</p>  
@@ -213,4 +213,4 @@ export function Commission() {
     )
 }
 
-export default Commission;
+export default General;
