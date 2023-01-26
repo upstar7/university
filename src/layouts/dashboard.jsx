@@ -15,20 +15,85 @@ import CreateInvoice from "@/pages/InvoiceManagement/CreateInvoice";
 import CreateMailing from "@/pages/InvoiceManagement/CreateMailing";
 import { Home } from "@/pages/dashboard";
 
+const defaultRoleType = "superAdmin";
+
+const roles = {
+  superAdmin: [
+    "dashboard",
+    "university",
+    "leads",
+    "application",
+    "invoice",
+    "accounting",
+    "system-reports",
+    "reports",
+    "settings",
+    "currency",
+    "system",
+  ],
+  admin: [
+    "dashboard",
+    "university",
+    "leads",
+    "application",
+    "invoice",
+    "accounting",
+    "system-reports",
+    "reports",
+    "settings",
+    "currency",
+    "system",
+  ],
+  counselor: ["dashboard", "university", "leads", "application", "currency"],
+  accountant: [
+    "dashboard",
+    "application",
+    "invoice",
+    "accounting",
+    "reports",
+    "currency",
+  ],
+  adminBranch: [
+    "dashboard",
+    "university",
+    "leads",
+    "application",
+    "invoice",
+    "accounting",
+    "reports",
+    "currency",
+  ],
+  counselorBranch: [
+    "dashboard",
+    "university",
+    "leads",
+    "application",
+    "currency",
+  ],
+  accountantBranch: [
+    "dashboard",
+    "application",
+    "invoice",
+    "accounting",
+    "reports",
+    "currency",
+  ],
+  applicant: ["dashboard"],
+};
+
 export function Dashboard() {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
 
   return (
     <div className="min-h-screen bg-blue-gray-50/50 ">
-      <Sidenav
-        routes={routes} 
-      />
-      
-      <div className={` ${
-        openSidenav ? "" : ""
-      } sm:ml-[110px] lg:ml-[390px]  ml-0 p-4`}>
-       
+      <Sidenav routes={routes} role={roles[defaultRoleType]} />
+
+      <div
+        className={` ${
+          openSidenav ? "" : ""
+        } ml-0 p-4  sm:ml-[110px] lg:ml-[390px]`}
+      >
         {/* <Configurator /> */}
         <IconButton
           size="lg"
@@ -40,19 +105,32 @@ export function Dashboard() {
           <Cog6ToothIcon className="h-5 w-5" />
         </IconButton>
         <Routes>
-           <Route  path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           {routes.map(
             ({ layout, pages }) =>
               layout === "dashboard" &&
-              pages.map(({ path, element }) => (
-                <Route path={path} element={element} />
-              ))
-              )}
-            <Route  path="/university_module/createUniversity" element={<CreateUniversity />} />
-            <Route  path="/university_module/createAcademic" element={<CreateAcademic />} />
-            <Route  path="/InvoiceManagement/CreateInvoice" element={<CreateInvoice />} />
-            <Route  path="/InvoiceManagement/CreateMailing" element={<CreateMailing />} />
-            
+              pages
+                .filter(({ id }) => roles[defaultRoleType].includes(id))
+                .map(({ path, element }) => (
+                  <Route path={path} element={element} />
+                ))
+          )}
+          <Route
+            path="/university_module/createUniversity"
+            element={<CreateUniversity />}
+          />
+          <Route
+            path="/university_module/createAcademic"
+            element={<CreateAcademic />}
+          />
+          <Route
+            path="/InvoiceManagement/CreateInvoice"
+            element={<CreateInvoice />}
+          />
+          <Route
+            path="/InvoiceManagement/CreateMailing"
+            element={<CreateMailing />}
+          />
         </Routes>
         {/* <div className="text-blue-gray-600">
           <Footer />
