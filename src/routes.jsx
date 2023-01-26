@@ -23,7 +23,7 @@ import University2 from "../public/img/sidebar/University2.svg";
 import { Home } from "@/pages/dashboard";
 import Universitymodule from "./pages/universitymodule/Universitymodule";
 import Leadsmodule from "./pages/leads/Leadsmodule";
-import ApplicationModule from "./pages/application/applicationModule";
+import ApplicationModule from "./pages/application/ApplicationModule";
 import InvoiceManagement from "./pages/InvoiceManagement/InvoiceManagement";
 import AccountingSystem from "./pages/Accounting/AccountingSystem";
 import ReportsManagement from "./pages/reports/reportsManagement";
