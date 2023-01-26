@@ -19,7 +19,7 @@ export function ApplicationByDate() {
       <div>
         <div className=" rounded-[34px] bg-white p-2 xl:p-12">
           <div className=" my-3 flex w-full flex-row justify-between pb-6">
-            <p className="text-[32px] font-bold text-black">Leads</p>
+            <p className="text-[32px] font-bold text-black">Applications</p>
           </div>
           <div className=" my-3 grid grid-cols-1 justify-between gap-3 py-5 xl:grid-cols-5">
             <form className="col-span-4 w-full">
@@ -83,7 +83,7 @@ export function ApplicationByDate() {
                     scope="col"
                     className="w-[100px] px-6 py-3 text-left text-lg font-bold text-gray-500  "
                   >
-                    Name
+                    Application
                   </th>
                   <th
                     scope="col"
@@ -123,7 +123,7 @@ export function ApplicationByDate() {
                       {items.date}
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-lg font-semibold text-gray-800">
-                      {items.name}
+                      {items.application}
                     </td>
                     <td className="whitespace-nowrap px-6 py-4  text-lg font-semibold text-gray-800">
                       {items.program}
