@@ -37,7 +37,7 @@ export function Sidenav({ brandImg, brandName, routes, role }) {
             : "-translate-x-[370px] sm:translate-x-0 "
         } fixed inset-0 z-50 my-4 ml-4 h-full  w-[100px]   rounded-xl bg-[#280559] transition-transform duration-300 sm:w-[100px] lg:w-[350px] `}
       >
-        <div className="mb-7 flex flex-row justify-center">
+        <div className="mb-4 flex flex-row justify-center">
           <button
             className="sm:hidden "
             onClick={() => setOpenSidenav(dispatch, false)}
@@ -47,13 +47,13 @@ export function Sidenav({ brandImg, brandName, routes, role }) {
               className=" mx-5 h-[18px] w-[27px]"
             />
           </button>
-          <div className="flex items-center justify-center py-6">
-            <img src={brandImg} className=" h-[44px] w-[219px] lg-max:hidden" />
+          <div className="flex items-center justify-center pt-4">
+            <img src={brandImg} className=" h-[45px] w-[192px] lg-max:hidden" />
           </div>
         </div>
 
         <div className="mx-3 px-3 lg-max:mx-0">
-          <p className=" mx-7 text-white lg-max:hidden ">{brandName}</p>
+          <p className=" pb-4 text-[#92929D] lg-max:hidden font-semibold">{brandName}</p>
 
           {routes.map(({ layout, title, pages }, key) => (
             <ul key={key} className="mb-4 flex flex-col items-center gap-1">

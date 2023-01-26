@@ -86,7 +86,7 @@ export function Dashboard() {
   const { sidenavColor, sidenavType, openSidenav } = controller;
 
   return (
-    <div className="min-h-screen bg-blue-gray-50/50 ">
+    <div className="min-h-screen bg-blue-gray-50/50 overflow-y-auto">
       <Sidenav routes={routes} role={roles[defaultRoleType]} />
 
       <div
