@@ -23,7 +23,7 @@ export function General() {
             <div>
             <div className=" bg-white p-2 xl:p-12 rounded-[34px]">
                 <div className="flex flex-row w-full justify-between items-center py-5 my-3 gap-3">
-                        <p className=" text-3xl text-black font-bold">Commission Invoice</p>
+                        <p className=" text-3xl text-black font-bold">General Invoice</p>
                         <NavLink to="createInvoice">
                             <Button className=" h-[60px] bg-[#280559] rounded-2xl flex flex-row justify-center items-center p-2">
                             <img className="w-[20px] m-1" src={plus} alt='...'/>

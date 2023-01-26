@@ -3,10 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 import { Select, Option, Button, Input } from "@material-tailwind/react";
 import universityLogo from "../../../public/img/universityLogo.svg";
 import saveIcon from "../../../public/img/saveIcon.svg";
+import print from "../../../public/img/print.svg";
 import AddField from "./AddField";
+import PreviewInvoice from "./PreviewInvoice";
 export function CreateInvoice() {
-  const [openModal, setOpenModal] = useState(false);
-const [modalType, setModalType] = useState("invoice");
+  const [openInvoiceAddModal, setOpenInvoiceAddModal] = useState(false);
+  const [openBillingAddModal, setOpenBillingAddModal] = useState(false);
+  const [openInvoiceListAddModal, setOpenInvoiceListAddModal] = useState(false);
+  const [openPreviewModal, setOpenPreviewModal] = useState(false);
+  //   const [modalType, setModalType] = useState("invoice");
 
   return (
     <div className="mt-[30px] w-full bg-[#E8E9EB]">
@@ -19,24 +24,24 @@ const [modalType, setModalType] = useState("invoice");
             Create or edit invoice
           </p>
         </div>
-        <div className="flex gap-6 justify-end px-1">
+        <div className="flex justify-end gap-6 px-1">
+          <Button className="rounded-[15px]  bg-[#280559]" onClick={() => setOpenPreviewModal(true)}>
+            <div className="flex flex-row items-center justify-center px-[10px] py-[10px]">
+              <img src={print} alt="..." />
+              <span className="px-[11px] text-base font-medium normal-case text-white ">
+                Print / Preview
+              </span>
+            </div>
+          </Button>
+          <PreviewInvoice open={openPreviewModal} close={() => setOpenPreviewModal(false)} />
+
           <NavLink to="commission">
             <Button className="rounded-[15px]  bg-[#280559]">
               <div className="flex flex-row items-center justify-center px-[10px] py-[10px]">
                 <img src={saveIcon} alt="..." />
-                <p className="px-[11px] text-base font-medium normal-case text-white ">
-                  Print / Preview
-                </p>
-              </div>
-            </Button>
-          </NavLink>
-          <NavLink to="commission">
-            <Button className="rounded-[15px]  bg-[#280559]">
-              <div className="flex flex-row items-center justify-center px-[10px] py-[10px]">
-                <img src={saveIcon} alt="..." />
-                <p className="px-[11px] text-base font-medium normal-case text-white ">
+                <span className="px-[11px] text-base font-medium normal-case text-white ">
                   Save Changes
-                </p>
+                </span>
               </div>
             </Button>
           </NavLink>
@@ -86,11 +91,11 @@ const [modalType, setModalType] = useState("invoice");
             <p className=" my-4 text-base font-semibold">Add Field</p>
             <Button
               className="h-[57px] w-full rounded-[7px] bg-[#F8F9FB] px-[11px] text-center text-[16px] font-semibold normal-case text-[#BEBFC3]"
-              onClick={() => setOpenModal(true)}
+              onClick={() => setOpenInvoiceAddModal(true)}
             >
               Click to add more field
             </Button>
-            <AddField open={openModal} close={() => setOpenModal(false)} />
+            <AddField open={openInvoiceAddModal} close={() => setOpenInvoiceAddModal(false)} />
           </div>
         </div>
       </div>
@@ -136,10 +141,12 @@ const [modalType, setModalType] = useState("invoice");
             <p className=" my-4 text-base font-semibold">Add Field</p>
             <Button
               className="h-[57px] w-full rounded-[7px] bg-[#F8F9FB] px-[11px] text-center text-[16px] font-semibold normal-case text-[#BEBFC3]"
-              onClick={() => setOpenModal(true)}
+              onClick={() => setOpenBillingAddModal(true)}
             >
               Click to add more field
             </Button>
+            <AddField open={openBillingAddModal} close={() => setOpenBillingAddModal(false)} />
+
           </div>
         </div>
       </div>
@@ -165,12 +172,12 @@ const [modalType, setModalType] = useState("invoice");
         <div className="my-10">
           <p className=" my-4 text-base font-semibold">Add row</p>
           <Button
-              className="h-[57px] w-full rounded-[7px] bg-[#F8F9FB] px-[11px] text-center text-[16px] font-semibold normal-case text-[#BEBFC3]"
-              onClick={() => setOpenModal(true)}
-            >
-              Click to add more field
-            </Button>
-            <AddField open={openModal} close={() => setOpenModal(false)} />
+            className="h-[57px] w-full rounded-[7px] bg-[#F8F9FB] px-[11px] text-center text-[16px] font-semibold normal-case text-[#BEBFC3]"
+            onClick={() => setOpenInvoiceListAddModal(true)}
+          >
+            Click to add more field
+          </Button>
+          <AddField open={openInvoiceListAddModal} close={() => setOpenInvoiceListAddModal(false)} />
         </div>
       </div>
 
