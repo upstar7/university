@@ -9,7 +9,11 @@ export const Userprops = [
     phone: "+60 123456789",
     branch: "Boston, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Labore et dolore magna aliqua",
+    role: "Author",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -21,7 +25,11 @@ export const Userprops = [
     phone: "+60 123456789",
     branch: "Chicago",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Labore et dolore magna aliqua",
+    role: "Author",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -33,7 +41,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Labore et dolore magna aliqua",
+    role: "Author",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -45,7 +57,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Labore et dolore magna aliqua",
+    role: "Author",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -57,7 +73,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Sed do eiusmod tempor incididunt",
+    role: "Editor",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -69,7 +89,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Lorem ipsum dolor sit amet",
+    role: "Super Admin",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -81,7 +105,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Consectetur adipiscing elit",
+    role: "Administrator ",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
   {
     id: "#12345128",
@@ -93,7 +121,11 @@ export const Userprops = [
     phone: "+60 321654987",
     branch: "Cambridge, Massachusetts",
     status: "Disquialified",
-    option: ":"
+    option: ":",
+    action: "Consectetur adipiscing elit",
+    role: "Administrator ",
+    time: "02:30 PM",
+    date: "2 Jan 2023"
   },
 ];
 export default Userprops;
