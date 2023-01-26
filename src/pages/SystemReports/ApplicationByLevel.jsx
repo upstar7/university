@@ -18,7 +18,7 @@ export function ApplicationByLevel() {
     <div className="mt-12 w-full bg-[#E8E9EB]">
       <div>
         <div className=" rounded-[34px] bg-white p-2 xl:p-12">
-          <div className=" my-3 flex w-full flex-row justify-between py-5">
+          <div className=" my-3 flex w-full flex-row justify-between pb-6">
             <p className="text-[32px] font-bold text-black">Applications</p>
           </div>
           <div className=" my-3 grid grid-cols-1 justify-between gap-3 py-5 xl:grid-cols-5">
@@ -118,8 +118,8 @@ export function ApplicationByLevel() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {ApplicationLeadsData.map((items) => (
-                  <tr>
+                {ApplicationLeadsData.map((items, index) => (
+                  <tr key={index}>
                     <td className="whitespace-nowrap py-4 text-sm font-medium text-gray-800">
                       <div className="flex h-7 items-center">
                         <Checkbox />

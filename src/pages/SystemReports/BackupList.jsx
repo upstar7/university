@@ -45,8 +45,8 @@ export function Leads() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                {Backup.map((items) => (
-                  <tr className="border-hidden">
+                {Backup.map((items, index) => (
+                  <tr key={index} className="border-hidden">
                     <td className="flex flex-row whitespace-nowrap py-4 text-lg font-medium text-gray-800 ">
                       <img
                         className="h-[28px] w-[24px]"
